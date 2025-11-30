@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonitoringPro - Profesjonalny Montaż Monitoringu</title>
+    
+    <style>
+        /* Resetowanie podstawowych styli */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; background-color: #ffffff; padding-top: 60px; }
+        .container { max-width: 1000px; margin: auto; overflow: auto; padding: 0 20px; }
+
+        /* Pasek nawigacyjny (Menu) */
+        nav { background: #003366; color: #fff; position: fixed; top: 0; width: 100%; padding: 10px 0; z-index: 10; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        nav .container { display: flex; justify-content: space-between; align-items: center; }
+        nav h1 { font-size: 1.5em; color: #fff; }
+        nav ul { list-style: none; display: flex; }
+        nav ul li a { color: #fff; text-decoration: none; padding: 10px 15px; display: block; transition: background-color 0.3s; }
+        nav ul li a:hover { background-color: #005fcd; }
+
+        /* Główny nagłówek (Hero Section) - POWRÓT DO WERSJI ZDJĘCIA COVER */
+        header {
+            background: #003366; /* Kolor zapasowy */
+            background-image: url('monitoring_hero.jpg'); /* Ścieżka do Twojego obrazu */
+            background-size: cover; /* Obraz pokrywa CAŁY obszar nagłówka */
+            background-position: center; /* Wyśrodkowanie obrazu */
+            padding: 100px 0;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Maska/nakładka na obraz, poprawiająca czytelność tekstu */
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Ciemna, półprzezroczysta nakładka */
+            z-index: 1;
+        }
+
+        /* Ustawienie tekstu ponad maską */
+        header h1, header p, header .container { position: relative; z-index: 2; }
+        header h1 { font-size: 3em; margin-bottom: 10px; font-weight: 700; }
+        header p { font-size: 1.3em; max-width: 700px; margin: auto; text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
+
+        .content-section { background: #fff; padding: 30px; margin-top: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-radius: 8px; }
+        .content-section h2 { color: #003366; margin-bottom: 15px; border-bottom: 2px solid #f4f4f4; padding-bottom: 10px; }
+        .about-text { margin-bottom: 20px; }
+        .gallery-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-top: 15px; }
+        .gallery-img { width: 100%; height: auto; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); aspect-ratio: 1 / 1; object-fit: cover; transition: transform 0.3s; }
+        .gallery-img:hover { transform: scale(1.02); }
+        .service-list li { padding: 10px 0; border-bottom: 1px #eee solid; color: #555; }
+        .contact-list { list-style: none; margin-top: 15px; }
+        .contact-list li { padding: 5px 0; }
+        .contact-list li a { color: #003366; text-decoration: none; font-weight: bold; }
+        footer { text-align: center; padding: 30px 0; margin-top: 40px; color: #777; font-size: 0.9em; border-top: 1px solid #ddd; }
+        
+        @media (max-width: 600px) {
+            header h1 { font-size: 2em; }
+            header p { font-size: 1em; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            nav .container { flex-direction: column; text-align: center; }
+            nav h1 { margin-bottom: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PASEK NAWIGACYJNY -->
+    <nav>
+        <div class="container">
+            <h1>MonitoringPro</h1>
+            <ul>
+                <li><a href="#about">O nas</a></li>
+                <li><a href="#services">Usługi</a></li>
+                <li><a href="#gallery">Galeria</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- NAGŁÓWEK POWITALNY (HERO SECTION Z OBRAZEM TŁA W CAŁOŚCI) -->
+    <header>
+        <div class="container">
+            <h1>MonitoringPro</h1>
+            <p>Profesjonalny montaż systemów monitoringu dla firm i klientów prywatnych. <br> Twoje bezpieczeństwo 24/7.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Reszta treści strony (O nas, Usługi, Galeria, Obszar Działania, Kontakt, Stopka) -->
+        <div id="about" class="content-section"><h2>O nas</h2><div class="about-text"><p><strong>MonitoringPro</strong> to lider na rynku zabezpieczeń w Twoim regionie. Działamy od ponad 10 lat, dostarczając naszym klientom spokój ducha i najwyższej jakości systemy monitoringu wizyjnego.</p><p>Nasza misja to ochrona Twojego mienia przy użyciu najnowszych technologii. Zatrudniamy wyłącznie certyfikowanych instalatorów, którzy dbają o estetykę montażu i niezawodność działania systemu 24 godziny na dobę.</p><p>Obsługujemy zarówno małe mieszkania, domy jednorodzinne, jak i duże obiekty przemysłowe oraz biurowce. Zaufaj profesjonalistom!</p></div></div>
+        <div id="services" class="content-section"><h2>Nasze Usługi</h2><p>Specjalizujemy się w kompleksowym wdrażaniu systemów telewizji przemysłowej (CCTV).</p><ul class="service-list"><li>✅ Projektowanie systemów monitoringu dopasowanych do potrzeb klienta</li><li>✅ Montaż kamer IP oraz analogowych (Hikvision, Dahua i inne)</li><li>✅ Konfiguracja rejestratorów, podglądu online na smartfonie/komputerze</li><li>✅ Serwis i konserwacja istniejących instalacji</li><li>✅ Profesjonalne doradztwo w wyborze sprzętu</li></ul></div>
+        <div id="gallery" class="content-section"><h2>Galeria Realizacji</h2><p>Zobacz przykładowe instalacje wykonane przez naszych specjalistów.</p><div class="gallery-grid"><div><img src="zdjecie1.jpg" alt="Realizacja 1" class="gallery-img"></div><div><img src="zdjecie2.jpg" alt="Realizacja 2" class="gallery-img"></div><div><img src="zdjecie3.jpg" alt="Realizacja 3" class="gallery-img"></div></div></div>
+        <div class="content-section"><h2>Obszar Działania</h2><p>Świadczymy usługi głównie na terenie województw: <strong>lubuskiego</strong> i <strong>dolnośląskiego</strong>.</p><p>Działamy w miastach takich jak: Zielona Góra, Gorzów Wielkopolski, Wrocław, Legnica, Jelenia Góra, Nowa Sól, Żagań oraz okolicznych powiatach. Możliwy dojazd do klientów z ościennych regionów po wcześniejszym uzgodnieniu.</p></div>
+        <div id="contact" class="content-section" style="background: #f9f9f9;"><h2>Kontakt</h2><p>Jesteś zainteresowany darmową wyceną? Zadzwoń lub napisz do nas:</p><ul class="contact-list"><li><strong>Telefon:</strong> <a href="tel:+48723446212">723 446 212</a></li><li><strong>Email:</strong> <a href="mailto:kontakt.kamat@gmail.com">kontakt.kamat@gmail.com</a></li></ul></div>
+
+        <footer>
+            <p>&copy; 2025 MonitoringPro. Wszelkie prawa zastrzeżone.</p>
+        </footer>
+    </div>
+</body>
+</html>
